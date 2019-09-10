@@ -1,0 +1,15 @@
+.container-all {
+  .header-bg-color {
+    width: 100%;
+    height: 300px;
+    background: white;
+  }
+  #page-title {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 50;
+    font-weight: bolder;
+  }
+}
+

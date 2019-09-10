@@ -1,0 +1,136 @@
+.all-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+// 1 card
+.destination-card {
+  width: 350px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 24px;
+
+  transition: all .2s ease;
+}
+.bg {
+  display: flex;
+  height: 100%;
+}
+.bg-svg {
+  transition: all .3s ease;
+  transition-delay: .2s;
+  z-index: 5;
+  width: 55%;
+}
+.destination-image {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  .photo-link {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 3s ease-out;
+  }
+}
+.destination-info {
+  position: absolute;
+  z-index: 10;
+  width: 350px;
+  padding: 16px;
+  .destination-header {
+    display: flex;
+    justify-content: space-between;
+    #destination-name {
+      display: flex;
+      justify-content: space-between;
+      transition: all .4s ease;
+      font-weight: bolder;
+      transition-delay: .2s;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 30px;
+      color: black;
+    }
+
+  }
+  #country-name {
+    margin-bottom: 16px;
+    color: black;
+    opacity: 0.5;
+    font-size: 16px;
+  }
+  p {
+    text-align: center;
+    opacity: 1;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    width: 31%;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 8px 0px;
+    background: #f2f2f2;
+    .info-icon {
+      height: 50px;
+    }
+    .mass-type {
+      font-size: 12px;
+    }
+  }
+}
+// hover effect
+.grow {
+  transition: all .2s ease;
+}
+.grow:hover {
+  transform: scale(1.01);
+}
+.destination-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  .destination-image {
+    img {
+      object-position: bottom;
+      filter: grayscale(100%);
+ // -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+
+    }
+  }
+  .destination-image:hover {
+
+      filter: grayscale(0);
+
+
+  }
+  .destination-info {
+    .destination-header {
+      #destination-name {
+        padding-top: 120px;
+        font-size: 50px;
+        width: 500px;
+        opacity: 0.9;
+        color: yellow;
+      }
+    }
+    #country-name {
+      opacity: 0;
+    }
+    p {
+      opacity: 0;
+    }
+  }
+  .bg-svg {
+    width: 0%;
+  }
+}
+
+// info hide/show
+.hide {
+  display: none;
+}
+
+

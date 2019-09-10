@@ -1,0 +1,57 @@
+<div class="container-all">
+    <div class="foo">
+  <span class="letter" data-letter="T">T</span>
+  <span class="letter" data-letter="E">E</span>
+  <span class="letter" data-letter="S">S</span>
+  <span class="letter" data-letter="T">T</span>
+</div>
+
+</div>
+<!-- Dropdown -->
+<div class="dropdown">
+  <button class="dropbtn btn-2">Filtre</button>
+  <div class="dropdown-content">
+    <a class="filter" id="water">Eau</a>
+    <a class="filter" id="banana">Bananes</a>
+    <a class="filter" id="transport">Transport</a>
+  </div>
+</div>
+<!-- All cards  -->
+<div class="all-cards container-all">
+  <% @destinations.each do |destination| %>
+    <div class="destination-card grow">
+        <div class="destination-info">
+          <div class="destination-header">
+            <h2 id="destination-name"><%= destination.destination_name %></h2>
+
+          </div>
+          <h6 id="country-name"><%= destination.country_name.upcase %></h6>
+
+          <p id="water-price" class="btn">
+
+            <%= destination.water_price%>
+            <span class="mass-type">/1,5L</span>
+          </p>
+
+
+        </div>
+
+      <div class="bg">
+        <div class="destination-image">
+          <%= image_tag destination.photo_link, class: "photo-link" %>
+        </div>
+
+        <div class="bg-svg">
+          <svg class="svg-sep" viewBox="0 0 46 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H46L0 211V0Z" fill="#F5F5F5"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+<div class="footer container-all">
+
+</div>
