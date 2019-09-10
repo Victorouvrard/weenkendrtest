@@ -33,7 +33,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    transition: all 3s ease-out;
+    transition: all 1s ease-out;
   }
 }
 .destination-info {
@@ -96,7 +96,7 @@
       object-position: bottom;
       filter: grayscale(100%);
  // -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out;
+      transition: 1s ease-in-out;
 
     }
   }
@@ -124,7 +124,8 @@
     }
   }
   .bg-svg {
-    width: 0%;
+    width: 20%;
+    box-shadow: 2px;
   }
 }
 
