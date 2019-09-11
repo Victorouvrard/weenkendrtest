@@ -14,3 +14,19 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+const list = document.querySelectorAll(".filter")
+
+list.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    document.querySelectorAll('.btn').forEach((btn) => {
+      if (btn.id === `${item.id}-price`) {
+      //  console.log('hola')
+      //  console.log(`${btn.id}`)
+        btn.classList.remove('hide')
+      //  console.log('hello')
+      } else {
+        btn.classList.add('hide')
+     }  })
+  })
+});

@@ -7,37 +7,30 @@ Destination.destroy_all
 
 puts "un monde sauvage apparait"
 Destination.create(destination_name: "Madrid",
-                  country_name: "Espagne",
+
                   photo_link: "https://images.kiwi.com/photos/600x600/madrid_es.jpg")
-puts "destination 1 done"
-Destination.create(destination_name: "Barcelone",
-                  country_name: "Espagne",
+puts "destination 1"
+Destination.create(destination_name: "Barcelona",
                   photo_link: "https://images.kiwi.com/photos/600x600/barcelona_es.jpg")
-puts "destination 2 done"
+puts "destination 2"
 Destination.create(destination_name: "Porto",
-                  country_name: "Portugal",
                   photo_link: "https://images.kiwi.com/photos/600x600/porto_pt.jpg")
-puts "destination 3 done"
-Destination.create(destination_name: "Venise",
-                  country_name: "Italie",
+puts "destination 3"
+Destination.create(destination_name: "Venice",
                   photo_link: "https://images.kiwi.com/photos/600x600/venice_it.jpg")
-puts "destination 4 done"
+puts "destination 4"
 Destination.create(destination_name: "Berlin",
-                  country_name: "Allemagne",
                   photo_link: "https://images.kiwi.com/photos/600x600/berlin_de.jpg")
-puts "destination 5 done"
+puts "destination 5"
 Destination.create(destination_name: "Milan",
-                  country_name: "Italie",
                   photo_link: "https://images.kiwi.com/photos/600x600/milan_it.jpg")
-puts "destination 6 done"
+puts "destination 6"
 Destination.create(destination_name: "Amsterdam",
-                  country_name: "Pays-Bas",
                   photo_link: "https://images.kiwi.com/photos/600x600/amsterdam_nl.jpg")
-puts "destination 7 done"
+puts "destination 7"
 Destination.create(destination_name: "Dublin",
-                  country_name: "Irlande",
                   photo_link: "https://images.kiwi.com/photos/600x600/dublin_ie.jpg")
-puts "destination 8 done"
+puts "destination 8"
 
 Destination.pluck(:destination_name).each do |city|
   puts "======= Scrapping #{city} ========="
@@ -47,7 +40,9 @@ Destination.pluck(:destination_name).each do |city|
   html_doc.search('.data_wide_table').each do |item|
     destination = Destination.find_by(destination_name: city)
     destination.update(
-      water_price: item.text.match(/Water.\W1.5.+€/)[0]
+           banana_price: item.text.match(/Banana.+€/)[0],
+           water_price: item.text.match(/Water.\W1.5.+€/)[0],
+           transport_price: item.text.match(/One-way Ticket.+€/)[0]
     )
   end
 end
