@@ -1,14 +1,3 @@
-.dropbtn {
-  background-color: black;
-  display: center;
-  font-weight: bolder;
-  color: white;
-  padding: 8px 24px;
-  font-size: 20px;
-  border: none;
-  border-radius: 8px;
-  transition: all .3s ease;
-}
 
 .dropdown {
   position: relative;
@@ -48,4 +37,20 @@
 .dropdown:hover .dropbtn {
   background-color: white;
   color: black;
+}
+
+.hide {
+ display: none;
+}
+
+.dropbtn {
+  background-color: black;
+  display: center;
+  font-weight: bolder;
+  color: white;
+  padding: 8px 24px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  transition: all .3s ease;
 }
