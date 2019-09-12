@@ -32,6 +32,22 @@ Destination.create(destination_name: "Dublin",
                   photo_link: "https://images.kiwi.com/photos/600x600/dublin_ie.jpg")
 puts "destination 8"
 
+Destination.create(destination_name: "Bamako",
+                  photo_link: "https://images.kiwi.com/photos/600x600/bamako_ml.jpg")
+puts "destination 9"
+
+Destination.create(destination_name: "Paris",
+                  photo_link: "https://images.kiwi.com/photos/600x600/paris_fr.jpg")
+puts "destination 10"
+
+Destination.create(destination_name: "Munich",
+                  photo_link: "https://images.kiwi.com/photos/600x600/munich_de.jpg")
+puts "destination 11"
+
+Destination.create(destination_name: "Prague",
+                  photo_link: "https://images.kiwi.com/photos/600x600/prague_cz.jpg")
+puts "destination 12"
+
 Destination.pluck(:destination_name).each do |city|
   puts "======= Scrapping #{city} ========="
   url = "https://www.numbeo.com/cost-of-living/in/#{city}?displayCurrency=EUR"

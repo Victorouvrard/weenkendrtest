@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 2019_09_11_112250) do
     t.string "photo_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "country_name"
-    t.string "drapeau"
     t.string "water_price"
     t.string "banana_price"
   end
