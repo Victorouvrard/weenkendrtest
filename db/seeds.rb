@@ -49,7 +49,7 @@ Destination.create(destination_name: "Prague",
 puts "destination 12"
 
 Destination.pluck(:destination_name).each do |city|
-  puts "======= Scrapping #{city} ========="
+  puts "=== Scrapping #{city} ==="
   url = "https://www.numbeo.com/cost-of-living/in/#{city}?displayCurrency=EUR"
   html_file = open(url).read
   html_doc = Nokogiri::HTML(html_file)
